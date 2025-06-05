@@ -15,11 +15,25 @@ I'm diving deep into the world of Machine Learning, starting from the fundamenta
 
 ```
 ml-fundamentals/
-├── 📓 notebooks/          # Jupyter notebooks for each topic
-├── 📊 data/              # Datasets for practice and projects
-├── 🐍 src/               # Python scripts and utilities
-├── 📋 docs/              # Notes and documentation
-└── 📖 README.md          # You are here!
+├── 📖 README.md                    # You are here!
+├── 🤖 projects/                    # Individual ML projects
+│   ├── 01-medical-insurance/       # Medical insurance cost analysis
+│   │   ├── 📓 notebooks/          # Analysis notebooks
+│   │   ├── 📊 data/               # Project datasets
+│   │   ├── 🐍 src/                # Python scripts & utilities
+│   │   ├── 📋 docs/               # Project documentation
+│   │   └── 📖 README.md           # Project overview
+│   ├── 02-linear-regression/       # Linear regression fundamentals
+│   │   ├── 📓 notebooks/
+│   │   ├── 📊 data/
+│   │   ├── 🐍 src/
+│   │   └── 📖 README.md
+│   └── 03-decision-trees-and-random-forests/          # Classification algorithms
+│       ├── 📓 notebooks/
+│       ├── 📊 data/
+│       ├── 🐍 src/
+│       └── 📖 README.md
+└── 📋 learning-notes/              # General ML concepts & notes
 ```
 
 ## 🎯 Learning Progress
@@ -43,11 +57,24 @@ ml-fundamentals/
 ## 🎨 Projects Showcase
 
 ### 1. Medical Insurance Cost Analysis 🏥
-- **File**: `01_medical_insurance_analysis.ipynb`
+- **Location**: `projects/01-medical-insurance/`
 - **Description**: Exploratory data analysis of medical insurance costs
 - **Skills**: Data cleaning, visualization, statistical analysis
+- **Status**: ✅ Completed
 
-*More projects coming soon as I progress through my learning journey!*
+### 2. Linear Regression Fundamentals 📈
+- **Location**: `projects/02-linear-regression/`
+- **Description**: Understanding and implementing linear regression from scratch
+- **Skills**: Mathematical foundations, model implementation
+- **Status**: 🚧 In Progress
+
+### 3. Classification Algorithms 🎯
+- **Location**: `projects/03-classification/`
+- **Description**: Exploring different classification techniques
+- **Skills**: Model comparison, evaluation metrics
+- **Status**: 📋 Planned
+
+*Each project is self-contained with its own data, code, and documentation!*
 
 ## 🌱 Current Focus
 
