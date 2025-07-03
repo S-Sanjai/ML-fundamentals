@@ -108,7 +108,7 @@ Our from-scratch logistic regression model achieved a **95.58% accuracy** on the
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ML-fundamentals.git
+git clone https://github.com/S-Sanjai/ML-fundamentals.git
 ```
 
 2. **Run the code:**

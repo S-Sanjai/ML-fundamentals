@@ -8,13 +8,13 @@ Welcome to **ML Fundamentals** — a hands-on repository for exploring foundatio
 
 ```
 Projects/
- ├── 01-medical-insurance/
+ ├── 01-medical-insurance-prediction/
  │   
  │
- ├── 02-logistic-regression-for-classification/
+ ├── 02-AUS-weather-classification/
  │    
  │
- ├── 03-logistic-regression/
+ ├── 03-Breast-Cancer-Prediction/
  │    
 ```
 
@@ -22,7 +22,7 @@ Projects/
 
 ## 📌 What’s Inside
 
-### ✅ **01-medical-insurance**
+### ✅ **01-medical-insurance-prediction**
 
 * **Goal**: Analyze a medical insurance dataset and build a regression model to predict insurance costs.
 * **Contents**:
@@ -33,7 +33,7 @@ Projects/
 
 ---
 
-### ✅ **02-logistic-regression-for-classification**
+### ✅ **02-AUS-weather-classification**
 
 * **Goal**: Build a logistic regression classifier for predicting weather conditions.
 * **Contents**:
@@ -46,7 +46,7 @@ Projects/
 
 ---
 
-### ✅ **03-logistic-regression**
+### ✅ **03-Breast-Cancer-Prediction**
 
 * **Goal**: Additional logistic regression practice with visualization.
 * **Contents**:

@@ -149,8 +149,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📧 Contact
 
 **Author**: [Your Name]
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [@yourusername](https://github.com/S-Sanjai)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/sanjai-s)
 
 ---
 
