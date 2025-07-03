@@ -56,6 +56,7 @@ Projects/
   * `notebook.ipynb`: Model notebook.
   * `output.png`: Visual output example.
   * `scratch_logistic.py`: Python scratch implementation.
+  * `sklearn_model/`: Scikit-learn implementation.
 
 ---
 
