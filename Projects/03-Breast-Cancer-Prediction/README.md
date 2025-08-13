@@ -1,4 +1,4 @@
-# 🧠 Breast Cancer Classification using Logistic Regression (From Scratch & Scikit-learn)
+#  Breast Cancer Classification using Logistic Regression (From Scratch & Scikit-learn)
 
 Welcome to this beginner-friendly yet insightful machine learning project where we built a **Logistic Regression model entirely from scratch** and also using **scikit-learn**. The focus of this project is on classifying breast cancer tumors as **malignant (M)** or **benign (B)** using numerical features extracted from medical imaging data.
 
@@ -18,7 +18,7 @@ Welcome to this beginner-friendly yet insightful machine learning project where 
 
 ---
 
-## 🚀 What We Did
+##  What We Did
 
 ### 1. **Data Preparation & Normalization**
 
@@ -71,7 +71,7 @@ Our from-scratch logistic regression model achieved a **95.58% accuracy** on the
 
 ---
 
-## 📚 Key Concepts Reinforced
+##  Key Concepts Reinforced
 
 - Data preprocessing and normalization
 - Manual implementation of gradient descent
@@ -82,7 +82,7 @@ Our from-scratch logistic regression model achieved a **95.58% accuracy** on the
 
 ---
 
-## 🧱 Challenges Faced & How We Solved Them
+##  Challenges Faced & How We Solved Them
 
 | Challenge                                | Solution                                              |
 | ---------------------------------------- | ----------------------------------------------------- |
@@ -93,7 +93,7 @@ Our from-scratch logistic regression model achieved a **95.58% accuracy** on the
 
 ---
 
-## 🌟 Future Scope
+##  Future Scope
 
 - Add a **confusion matrix** and **classification report** for deeper evaluation
 - Build an interactive **Streamlit UI** for real-time predictions
@@ -103,7 +103,7 @@ Our from-scratch logistic regression model achieved a **95.58% accuracy** on the
 
 ---
 
-## 🔧 How to Use This Project
+##  How to Use This Project
 
 1. **Clone the repository:**
 
@@ -122,7 +122,7 @@ git clone https://github.com/S-Sanjai/ML-fundamentals.git
 
 ---
 
-## 🙌 Final Thoughts
+##  Final Thoughts
 
 This project wasn’t about using fancy tools — it was about **truly understanding** how machine learning works at its core. By implementing everything ourselves, we built not just a model, but also a strong foundation in ML theory and practice.
 

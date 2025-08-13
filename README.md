@@ -1,4 +1,4 @@
-# 📚 ML Fundamentals
+# ML Fundamentals
 
 Welcome to **ML Fundamentals** — a hands-on repository for exploring foundational Machine Learning concepts through well-structured, practical projects.
 
@@ -60,7 +60,7 @@ Projects/
 
 ---
 
-## 🚀 How to Use
+## How to Use
 
 1. Clone the repo:
 
@@ -77,7 +77,7 @@ Projects/
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Language**: Python 🐍
 - **Libraries**: pandas, numpy, matplotlib, seaborn, scikit-learn
@@ -86,7 +86,7 @@ Projects/
 
 ---
 
-## 🌱 Current Focus
+## Current Focus
 
 I'm currently working through fundamental ML concepts, focusing on:
 - Understanding data patterns and relationships
@@ -96,7 +96,7 @@ I'm currently working through fundamental ML concepts, focusing on:
 
 ---
 
-## 📈 Goals
+## Goals
 
 - [ ] Complete foundational ML concepts
 - [ ] Build 5+ end-to-end ML projects
@@ -106,7 +106,7 @@ I'm currently working through fundamental ML concepts, focusing on:
 
 ---
 
-## 🤝 Connect & Collaborate
+## Connect & Collaborate
 
 Feel free to explore my code, suggest improvements, or reach out if you're on a similar learning journey! I believe learning is better when shared. 
 

@@ -2,7 +2,7 @@
 
 A comprehensive implementation of logistic regression from scratch for binary and multiclass classification problems.
 
-## 📋 Table of Contents
+##  Table of Contents
 - [Overview](#overview)
 - [Features](#features)
 - [Dataset](#dataset)
@@ -15,11 +15,11 @@ A comprehensive implementation of logistic regression from scratch for binary an
 - [Contributing](#contributing)
 - [License](#license)
 
-## 🎯 Overview
+##  Overview
 
 This project implements logistic regression from scratch using Python and NumPy. The implementation includes both binary and multiclass classification capabilities, demonstrating the mathematical foundations and practical applications of logistic regression in machine learning.
 
-## ✨ Features
+##  Features
 
 - **From-scratch implementation** of logistic regression
 - **Binary classification** support
@@ -31,7 +31,7 @@ This project implements logistic regression from scratch using Python and NumPy.
 - **Cross-validation** for model validation
 - **Feature scaling and preprocessing** utilities
 
-## 📊 Dataset
+##  Dataset
 
 This project uses [specify your dataset here, e.g.]:
 - **Primary Dataset**: [Dataset name and source]
@@ -45,7 +45,7 @@ This project uses [specify your dataset here, e.g.]:
 - Categorical variable encoding
 - Train-test split with stratification
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequisites
 - Python 3.7+
@@ -70,7 +70,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 💻 Usage
+##  Usage
 
 ### Quick Start
 ```python
@@ -108,7 +108,7 @@ Open and run the provided notebook for interactive exploration:
 jupyter notebook logistic_regression_analysis.ipynb
 ```
 
-## 🔧 Implementation Details
+##  Implementation Details
 
 ### Mathematical Foundation
 The logistic regression model is based on the following key concepts:
@@ -141,7 +141,7 @@ The logistic regression model is based on the following key concepts:
 - **L2 Regularization (Ridge)**: Prevents overfitting
 - **Elastic Net**: Combination of L1 and L2
 
-## 📈 Results
+##  Results
 
 ### Model Performance
 | Metric | Value |
@@ -219,11 +219,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/)
 - [Pattern Recognition and Machine Learning - Bishop](https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/)
 
-## 👤 Author
+##  Author
 
 **S. Sanjai**
 - GitHub: [@S-Sanjai](https://github.com/S-Sanjai)
 - Project Link: [ML-fundamentals](https://github.com/S-Sanjai/ML-fundamentals)
 
 ---
-⭐ If you found this project helpful, please give it a star!
+ If you found this project helpful, please give it a star!

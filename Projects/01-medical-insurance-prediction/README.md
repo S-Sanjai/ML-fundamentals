@@ -1,12 +1,12 @@
-# Medical Insurance Cost Prediction 🏥💰
+# Medical Insurance Cost Prediction 
 
 A machine learning project that predicts medical insurance costs based on individual characteristics using Linear Regression.
 
-## 📋 Project Overview
+##  Project Overview
 
 This project implements an end-to-end machine learning pipeline to predict medical insurance charges based on demographic and health factors. The model achieves superior performance through effective data preprocessing and feature engineering.
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 **Objective**: Predict medical insurance costs for individuals based on their personal characteristics.
 
@@ -14,7 +14,7 @@ This project implements an end-to-end machine learning pipeline to predict medic
 
 **Target Variable**: Insurance charges (in USD)
 
-## 📊 Dataset
+##  Dataset
 
 The dataset contains information about individuals and their medical insurance costs with the following features:
 
@@ -28,7 +28,7 @@ The dataset contains information about individuals and their medical insurance c
 | `region` | Categorical | Geographic region (northeast, northwest, southeast, southwest) |
 | `charges` | Numerical | Medical insurance charges (target variable) |
 
-## 🔧 Technical Implementation
+##  Technical Implementation
 
 ### Data Preprocessing Pipeline
 1. **Numerical Features**: Age, BMI, Children
@@ -47,18 +47,18 @@ The dataset contains information about individuals and their medical insurance c
 - **Train/Test Split**: 80/20 with `random_state=42`
 - **Evaluation Metric**: RMSE (Root Mean Square Error)
 
-## 📈 Performance Results
+##  Performance Results
 
 | Metric | Value |
 |--------|-------|
 | **Test RMSE** | 5,796.28 |
 | **Train RMSE** | 6,105.54 |
-| **Performance** | ✅ Superior generalization (test < train loss) |
+| **Performance** | Superior generalization (test < train loss) |
 
 ### Key Achievement
 The model demonstrates **excellent generalization** with test loss being lower than training loss, indicating robust performance on unseen data.
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 ```python
@@ -90,7 +90,7 @@ from sklearn.preprocessing import StandardScaler
 └── data/                        # Dataset files (if included)
 ```
 
-## 🔍 Key Features & Insights
+##  Key Features & Insights
 
 ### Feature Importance Analysis
 The model provides interpretable coefficients showing which factors most influence insurance costs:
@@ -104,14 +104,14 @@ weights.sort_values(by='weight', ascending=False)
 - **Negative coefficients**: Features that decrease insurance costs
 - **Magnitude**: Indicates the strength of each feature's impact
 
-## 🏆 What Makes This Implementation Special
+##  What Makes This Implementation Special
 
 1. **Superior Data Preprocessing**: Custom feature engineering pipeline outperforms standard approaches
 2. **Excellent Generalization**: Test performance better than training (rare and desirable)
 3. **Reproducible Results**: Fixed random seeds ensure consistent outcomes
 4. **Comprehensive Documentation**: Detailed explanation of methodology and results
 
-## 📚 Learning Outcomes
+##  Learning Outcomes
 
 ### Technical Skills Demonstrated
 - ✅ Data preprocessing and feature engineering
@@ -125,7 +125,7 @@ weights.sort_values(by='weight', ascending=False)
 - Proper feature scaling and encoding significantly improve performance
 - Model interpretability is crucial for real-world applications
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - [ ] **Cross-validation** for more robust performance estimates
 - [ ] **Feature selection** techniques to identify optimal feature subset
@@ -146,7 +146,7 @@ Feel free to fork this project and submit pull requests for improvements. Areas 
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 📧 Contact
+##  Contact
 
 **Author**: [Your Name]
 - GitHub: [@yourusername](https://github.com/S-Sanjai)
@@ -154,7 +154,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-⭐ **If you found this project helpful, please give it a star!** ⭐
+ **If you found this project helpful, please give it a star!** 
 
-## 🏷️ Tags
+##  Tags
 `machine-learning` `linear-regression` `insurance-prediction` `data-science` `python` `scikit-learn` `jupyter-notebook` `regression-analysis`
