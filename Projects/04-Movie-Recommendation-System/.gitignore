@@ -1,0 +1,5 @@
+.env
+__pycache__/
+*.pyc
+# For ML-fundamentals: Ignore web directory
+Projects/04-Movie-Recommendation-System/web/
