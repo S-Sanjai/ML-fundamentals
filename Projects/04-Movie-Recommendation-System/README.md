@@ -1,29 +1,130 @@
 # Movie Recommendation System
 
-This project is a content-based movie recommendation system that uses K-Nearest Neighbors (KNN) to find similar movies. It recommends movies based on their overview and genres.
+A content-based movie recommendation system built from scratch using custom K-Nearest Neighbors (KNN) implementation with TF-IDF vectorization. This project demonstrates core machine learning concepts without relying on high-level ML libraries.
 
-## Project Structure
+## 🎯 Overview
 
-The project is organized into the following directories:
+This is the machine learning backend of a movie recommendation system. It analyzes movie overviews and genres to find similar movies using a custom-built KNN algorithm and TF-IDF text vectorization implemented from scratch.
 
-- `data/`: Contains the raw movie dataset (`movies.csv`).
-- `notebooks/`: Contains the Jupyter notebook for data preprocessing (`data_prep.ipynb`).
-- `models/`: Contains the saved model files, including the TF-IDF vectorizer, the final feature matrix, and feature names.
-- `src/`: Contains the Python source code for the project.
+## ✨ Key Features
 
-## How It Works
+- **Custom KNN Algorithm**: Built from scratch without using sklearn's KNN
+- **TF-IDF from First Principles**: Understanding and implementing text vectorization
+- **Genre Multi-Hot Encoding**: Binary representation of movie genres
+- **Cosine Similarity**: Distance metric for finding similar movies
+- **Pre-computed Feature Matrix**: Optimized for fast recommendations
 
-The recommendation system works by converting movie information into numerical vectors and then finding the most similar movies using the K-Nearest Neighbors algorithm.
+## 📁 Project Structure
 
-1.  **Data Preprocessing**:
-    -   **Movie Overviews**: The text from the 'overview' of each movie is converted into a numerical vector using TF-IDF (Term Frequency-Inverse Document Frequency).
-    -   **Movie Genres**: The movie genres are multi-hot encoded. This means that for each movie, a binary vector is created where each element corresponds to a genre, and its value is 1 if the movie has that genre and 0 otherwise.
+```
+04-Movie-Recommendation-System/
+├── data/
+│   └── movies.csv                    # Movie dataset with titles, overviews, genres
+├── models/
+│   ├── final_matrix.npz              # Pre-computed feature matrix for all movies
+│   ├── tfidf_vectorizer.joblib       # Trained TF-IDF vectorizer
+│   └── feature_names.npy             # Feature names for interpretability
+├── notebooks/
+│   └── data_prep.ipynb               # Data preprocessing and model training
+└── src/
+    ├── __init__.py
+    ├── knn_scratch.py                # Custom KNN implementation
+    ├── tf_idf.py                     # TF-IDF vectorizer from scratch
+    ├── api_auth.py                   # TMDB API credentials (optional)
+    └── scrape_data.py                # Data collection utilities (optional)
+```
 
-2.  **Feature Combination**: The TF-IDF vector for the overview and the multi-hot encoded genre vector are combined to create a single feature vector for each movie.
+## 🔬 How It Works
 
-3.  **Recommendation**: The K-Nearest Neighbors (KNN) algorithm is used to find the 'k' most similar movies to a given movie based on the cosine similarity of their feature vectors.
+### 1. Data Preprocessing
 
-## How to Use
+The `notebooks/data_prep.ipynb` notebook performs the following steps:
 
-1.  **Data Preparation**: Run the `data_prep.ipynb` notebook in the `notebooks` directory to preprocess the data and create the necessary model files.
-2.  **Get Recommendations**: Use the scripts in the `src` directory to get movie recommendations. The `knn_scratch.py` file contains the core KNN recommendation logic.
+- **Load Dataset**: Reads `movies.csv` containing movie metadata
+- **Text Vectorization**: Converts movie overviews into TF-IDF vectors
+  - Calculates term frequency (TF) for each word in a document
+  - Calculates inverse document frequency (IDF) across all documents
+  - Combines TF and IDF to create meaningful text representations
+- **Genre Encoding**: Creates multi-hot encoded vectors for genres
+  - Each genre gets a binary feature (1 if present, 0 if absent)
+- **Feature Combination**: Concatenates TF-IDF and genre vectors
+  - Combined vector represents the movie's content profile
+
+### 2. K-Nearest Neighbors Algorithm
+
+The `src/knn_scratch.py` file contains the core recommendation logic:
+
+```python
+from src.knn_scratch import MovieRecommender
+
+# Initialize recommender
+recommender = MovieRecommender('data/movies.csv', 'models/final_matrix.npz')
+
+# Get recommendations
+recommendations = recommender.get_recommendations('Inception', k=5)
+```
+
+**Algorithm Steps**:
+1. Find the feature vector for the input movie
+2. Calculate cosine similarity with all other movies
+3. Sort by similarity score (highest first)
+4. Return top-k most similar movies
+
+**Cosine Similarity Formula**:
+```
+similarity = (A · B) / (||A|| × ||B||)
+```
+
+### 3. TF-IDF Vectorization
+
+The `src/tf_idf.py` implements TF-IDF from scratch:
+
+- **Type**: Content-Based Filtering
+- **Technique**: Term Frequency-Inverse Document Frequency
+- **Goal**: Convert text descriptions into numerical vectors
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.8 or higher
+- pip package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd 04-Movie-Recommendation-System
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install pandas numpy scipy joblib jupyter requests
+   ```
+
+3. **Prepare the data**
+   ```bash
+   jupyter notebook notebooks/data_prep.ipynb
+   ```
+   Run all cells to generate the model files.
+
+### Usage
+
+```python
+from src.knn_scratch import MovieRecommender
+
+# Initialize
+recommender = MovieRecommender(
+    data_path='data/movies.csv',
+    matrix_path='models/final_matrix.npz'
+)
+
+# Get recommendations
+recs = recommender.get_recommendations('The Dark Knight', k=5)
+print(recs)
+```
+
+## 📝 License
+
+This project is for educational purposes as part of ML fundamentals learning.

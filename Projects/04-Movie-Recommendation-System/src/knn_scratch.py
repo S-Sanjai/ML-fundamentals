@@ -45,6 +45,9 @@ class MovieRecommender:
         self.df = pd.read_csv(data_path)
         self.final_matrix = sparse.load_npz(matrix_path)
         
+        # Calculate norms for all movies (pre-computed)
+        self.movie_norms = sparse.linalg.norm(self.final_matrix, axis=1)
+        
     def _get_movie_index(self, title: str) -> Optional[int]:
         """
         Get the index of a movie by its title.
@@ -58,27 +61,26 @@ class MovieRecommender:
         matches = self.df[self.df['title'].str.lower() == title.lower()].index
         return matches[0] if len(matches) > 0 else None
     
-    def _calculate_similarity(self, query_vec: np.ndarray) -> np.ndarray:
+    def _calculate_similarity(self, query_vec: sparse.csr_matrix) -> np.ndarray:
         """
         Calculate cosine similarity between query vector and all movies.
         
         Args:
-            query_vec (np.ndarray): Feature vector of the query movie
+            query_vec (sparse.csr_matrix): Feature vector of the query movie
             
         Returns:
             np.ndarray: Array of cosine similarity scores
         """
-        # Convert to dense arrays for computation
-        A = query_vec.toarray().flatten()
-        B = self.final_matrix.toarray()
+        # Calculate dot products (sparse @ sparse)
+        dot_products = self.final_matrix.dot(query_vec.T).toarray().flatten()
+        
+        # Calculate query norm
+        norm_query = sparse.linalg.norm(query_vec)
         
         # Calculate cosine similarity
-        dot_products = B @ A
-        norm_A = np.linalg.norm(A)
-        norms_B = np.linalg.norm(B, axis=1)
-        return dot_products / (norms_B * norm_A + 1e-10)
+        return dot_products / (self.movie_norms * norm_query + 1e-10)
     
-    def get_recommendations(self, title: str) -> List[Tuple[str, float]]:
+    def get_recommendations(self, title: str) -> List[dict]:
         """
         Get movie recommendations based on a query movie title.
         
@@ -86,7 +88,7 @@ class MovieRecommender:
             title (str): Title of the movie to base recommendations on
             
         Returns:
-            List[Tuple[str, float]]: List of (movie_title, similarity_score) tuples
+            List[dict]: List of dictionaries containing movie details (title, similarity, id)
             
         Raises:
             ValueError: If the movie title is not found in the database
@@ -106,11 +108,37 @@ class MovieRecommender:
         # Return movie titles and similarity scores
         recommendations = []
         for idx in top_indices:
-            movie_title = self.df.iloc[idx]['title']
-            similarity = cosine_sims[idx]
-            recommendations.append((movie_title, similarity))
+            row = self.df.iloc[idx]
+            recommendations.append({
+                'title': row['title'],
+                'similarity': cosine_sims[idx],
+                'id': int(row['id'])
+            })
             
         return recommendations
+
+    def get_movie_details(self, title: str) -> dict:
+        """
+        Get details of a specific movie.
+        
+        Args:
+            title (str): Title of the movie
+            
+        Returns:
+            dict: Dictionary containing movie details (title, id)
+            
+        Raises:
+            ValueError: If the movie title is not found
+        """
+        query_index = self._get_movie_index(title)
+        if query_index is None:
+            raise ValueError(f"Movie '{title}' not found in database")
+            
+        row = self.df.iloc[query_index]
+        return {
+            'title': row['title'],
+            'id': int(row['id'])
+        }
 
 def main():
     """Example usage of the MovieRecommender class."""

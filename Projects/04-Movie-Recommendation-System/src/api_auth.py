@@ -1,6 +1,10 @@
+import os
 import requests
+from dotenv import load_dotenv
 
-API_KEY = "2fdee7413c405101cbbbf8297a90cd79"
+load_dotenv()
+
+API_KEY = os.getenv("TMDB_API_KEY")
 
 url = f"https://api.themoviedb.org/3/movie/popular?api_key={API_KEY}&language=en-US&page=1"
 genre_url = f"https://api.themoviedb.org/3/genre/movie/list?api_key={API_KEY}&language=en-US"
