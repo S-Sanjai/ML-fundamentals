@@ -16,6 +16,9 @@ Projects/
  │
  ├── 03-Breast-Cancer-Prediction/
  │    
+ │
+ ├── 04-Movie-Recommendation-System/
+ │    
 ```
 
 ---
@@ -60,6 +63,18 @@ Projects/
 
 ---
 
+### ✅ **04-Movie-Recommendation-System**
+
+* **Goal**: Build a content-based recommendation system using custom KNN with TF-IDF vectorization.
+* **Contents**:
+  * `data/`: Movie dataset with titles, overviews, and genres.
+  * `models/`: Pre-computed TF-IDF vectorizer and feature matrix.
+  * `notebooks/`: Data preprocessing (`data_prep.ipynb`).
+  * `src/`: Custom KNN and TF-IDF implementations from scratch.
+  * `README.md`: Detailed documentation.
+
+---
+
 ## How to Use
 
 1. Clone the repo:
@@ -90,9 +105,10 @@ Projects/
 
 I'm currently working through fundamental ML concepts, focusing on:
 - Understanding data patterns and relationships
-- Building intuition for different algorithms
+- Building ML algorithms from scratch (KNN, TF-IDF)
 - Practicing proper data science workflows
 - Creating clean, reproducible code
+- Implementing recommendation systems
 
 ---
 
